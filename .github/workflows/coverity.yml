@@ -9,7 +9,7 @@ on:
 jobs:
   latest:
     runs-on: ubuntu-latest
-    if: github.repository == 'mbroz/cryptsetup'
+    if: github.repository == 'mbroz/cryptsetup_test'
     steps:
       - name: Repository checkout
         uses: actions/checkout@v7

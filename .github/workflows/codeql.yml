@@ -14,7 +14,7 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
-    if: github.repository == 'mbroz/cryptsetup'
+    if: github.repository == 'mbroz/cryptsetup_test'
     concurrency:
       group: ${{ github.workflow }}-${{ matrix.language }}-${{ github.ref }}
       cancel-in-progress: true

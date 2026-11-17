@@ -22,8 +22,8 @@ jobs:
       - name: Repository checkout
         uses: actions/checkout@v7
       - name: Ubuntu setup
-        run: sudo -E .github/workflows/cibuild-setup-ubuntu.sh
+        run: sudo --preserve-env=COMPILER,COMPILER_VERSION,RUN_SSH_PLUGIN_TEST .github/workflows/cibuild-setup-ubuntu.sh
       - name: Configure & Make
         run: .github/workflows/cibuild.sh CONFIGURE MAKE
       - name: Check
-        run: sudo -E .github/workflows/cibuild.sh CHECK
+        run: sudo --preserve-env=COMPILER,COMPILER_VERSION,RUN_SSH_PLUGIN_TEST .github/workflows/cibuild.sh CHECK

@@ -14,7 +14,7 @@ jobs:
       - name: Repository checkout
         uses: actions/checkout@v7
       - name: Ubuntu setup
-        run: sudo -E .github/workflows/cibuild-setup-ubuntu.sh
+        run: sudo --preserve-env=COMPILER,COMPILER_VERSION .github/workflows/cibuild-setup-ubuntu.sh
         env:
           COMPILER: "gcc"
           COMPILER_VERSION: "15"

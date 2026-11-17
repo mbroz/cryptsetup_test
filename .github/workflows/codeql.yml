@@ -40,7 +40,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          sudo -E .github/workflows/cibuild-setup-ubuntu.sh
+          sudo --preserve-env=COMPILER,COMPILER_VERSION,RUN_SSH_PLUGIN_TEST .github/workflows/cibuild-setup-ubuntu.sh
           # Force autoconf for now, meson is broken in analysis step
           rm meson.build
 
